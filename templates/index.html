@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% load static %}
+    <link rel="stylesheet", type="text/css", href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="image-container">
+        {% for image in images %}
+            <div class="image-box">
+                <img src="{{ image.image.url }}" class="image">
+                <h2 class="image-caption">{{ image.caption }}</h2>
+            </div>
+        {% endfor %}
+
+    </div>
+</body>
+</html>
